@@ -12,6 +12,7 @@ import About from './Componnet/About/About.jsx';
 import Contact from './Componnet/Contact/Contact.jsx';
 import Service from './Componnet/Service/Service.jsx';
 import Login from './Componnet/Login/Login.jsx';
+import Singup from './Componnet/Singup/Singup.jsx';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element:<Login></Login>
+      },
+      {
+        path: '/singup',
+        element:<Singup></Singup>
       },
     ]
   },

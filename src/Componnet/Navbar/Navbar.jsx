@@ -8,7 +8,9 @@ const Navbar = () => {
   const handleLoginClick = () => {
     navigate('/login'); // Redirect to the login page
   };
-
+const handlesingupClick = () =>{
+  navigate('/singup'); //Redirect ot the singup page
+}
   return (
     <>
       <Container>
@@ -50,7 +52,8 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="navbar-end">
-            <button className="btn" onClick={handleLoginClick}>Login</button>
+            <button className="btn mr-4" onClick={handleLoginClick}>Singup</button>
+            <button className="btn" onClick={handlesingupClick}>Login</button>
           </div>
         </div>
       </Container>
