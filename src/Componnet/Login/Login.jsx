@@ -3,7 +3,7 @@ import Container from '../Container';
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, GithubAuthProvider, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, GithubAuthProvider, createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 import app from '../Firebase/Firebase';
 import { Link } from 'react-router-dom';
 
@@ -40,7 +40,11 @@ const Login = () => {
         const newUser = result.user;
         setUser(newUser);
         setSuccessMessage('You have successfully registered');
-
+        sendEmailVerification(result.user)
+        .then(()=>{
+          alert('plz verification you gmail');
+          
+        })
         // Clear the input fields
         e.target.reset();
       })
